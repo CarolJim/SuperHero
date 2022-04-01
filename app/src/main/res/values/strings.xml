@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">SuperHero</string>
+    <string name="modal_error_tittle">Intenta de nuevo más tarde</string>
+    <string name="register_number_error_dialog_button">INTENTAR DE NUEVO</string>
+    <string name="wait_a_little">Espere un momento</string>
+    <string name="almost_ready">Cargando información...</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="message_error">Por el momento el servicio no se encuentra disponible, intente mas tarde.</string>
+    <string name="super_hero_details">Super Hero Details</string>
+</resources>

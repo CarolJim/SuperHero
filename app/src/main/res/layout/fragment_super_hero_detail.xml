@@ -1,0 +1,81 @@
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+    tools:context="com.superhero.test.superhero_list.presentation.SuperHeroDetailFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp">
+
+            <ImageView
+                android:id="@+id/closeImage"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_close_black_24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/teal_200" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/super_hero_details"
+                android:textAlignment="center"
+                android:textColor="@color/api_color"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/closeImage" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView">
+
+                <include
+                    android:id="@+id/biography"
+                    layout="@layout/layout_biography_hero" />
+
+                <include
+                    android:id="@+id/powerStats"
+                    layout="@layout/layout_powerstats_hero" />
+
+                <include
+                    android:id="@+id/appearance"
+                    layout="@layout/layout_appearance_hero" />
+
+                <include
+                    android:id="@+id/work"
+                    layout="@layout/layout_work_hero" />
+
+                <include
+                    android:id="@+id/connections"
+                    layout="@layout/layout_connections_hero" />
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</com.google.android.material.card.MaterialCardView>

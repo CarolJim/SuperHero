@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/superHeroListFragment">
+
+
+    <fragment
+        android:id="@+id/superHeroListFragment"
+        android:name="com.superhero.test.superhero_list.presentation.SuperHeroListFragment"
+        android:label="SuperHeroListFragment" >
+        <action
+            android:id="@+id/to_onErrorFragment"
+            app:destination="@id/onErrorFragment" />
+        <action
+            android:id="@+id/to_superHeroDetailFragment"
+            app:destination="@id/superHeroDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/onErrorFragment"
+        android:name="com.superhero.test.superhero_list.presentation.OnErrorFragment"
+        android:label="fragment_on_error"
+        tools:layout="@layout/fragment_on_error" >
+        <action
+            android:id="@+id/to_superHeroListFragment"
+            app:destination="@id/superHeroListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/superHeroDetailFragment"
+        android:name="com.superhero.test.superhero_list.presentation.SuperHeroDetailFragment"
+        android:label="fragment_super_hero_detail"
+        tools:layout="@layout/fragment_super_hero_detail" >
+
+        <argument
+            android:name="superHeroArg"
+            app:argType="com.superhero.test.superhero_list.domain.model.SuperHero"
+            app:nullable="false"/>
+
+        <argument
+            android:name="position"
+            app:argType="integer"
+            app:nullable="false"/>
+
+    </fragment>
+</navigation>
